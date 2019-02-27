@@ -56,7 +56,7 @@ What next?
       <pubDate>Mon, 25 Feb 2019 09:00:00 +0000</pubDate>
       
       <guid>/documentation/release-notes/archive/</guid>
-      <description>All release notes  Vamp version 0.0.1  Release notes for older daSWAG versions can be found in the Gitlab release notes.</description>
+      <description>All release notes  Vamp version 0.0.1  Release notes for older daSWAG versions can be found in the Github release notes.</description>
     </item>
     
     <item>
@@ -98,7 +98,7 @@ What next?
       
       <guid>/documentation/release-notes/version-0-0-1/</guid>
       <description> What is new What has changed Known issues All closed issues can be found here: What next?
- Read all release notes on gitlab (gitlab.com/daswag - daSWAG releases) You can install daSWAG.   </description>
+ Read all release notes on github (github.com/daswag - daSWAG releases) You can install daSWAG.   </description>
     </item>
     
   </channel>
