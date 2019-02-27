@@ -1,0 +1,61 @@
+{
+  "children": [
+    {
+      "path": "about",
+      "text": "About",
+      "visible": false
+    },
+    {
+      "path": "community",
+      "text": "Community",
+      "visible": false
+    },
+    {
+      "path": "contact",
+      "text": "Contact",
+      "visible": false
+    },
+    {
+      "path": "index.json",
+      "text": "Index.json",
+      "visible": false
+    },
+    {
+      "path": "index",
+      "text": "Index",
+      "visible": false
+    },
+    {
+      "path": "documentation/how-daswag-works/architecture-and-components",
+      "children": [
+        {
+          "path": "documentation/how-daswag-works/architecture-and-components",
+          "children": [
+            {
+              "path": "documentation/how-daswag-works/architecture-and-components",
+              "text": "Architecture and components",
+              "visible": true
+            }
+          ],
+          "text": "How daswag works",
+          "visible": true
+        },
+        {
+          "path": "documentation/installation",
+          "children":
+          [
+            {
+              "path": "documentation/installation",
+              "text": "Overview",
+              "visible": true
+            }
+          ],
+          "text": "Installation",
+          "visible": true
+        }
+        ],
+      "text": "Documentation",
+      "visible": true
+    }
+  ]
+}

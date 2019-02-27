@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About us on daSWAG | Serverless Web Applicaiton Generator</title>
+    <link>/about/</link>
+    <description>Recent content in About us on daSWAG | Serverless Web Applicaiton Generator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Sep 2016 09:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Contact</title>
+      <link>/about/contact/</link>
+      <pubDate>Tue, 13 Sep 2016 09:00:00 +0000</pubDate>
+      
+      <guid>/about/contact/</guid>
+      <description>daSWAG is an OpenSource project being developed by daswag.tech community.
+Our Core developers:
+TODO</description>
+    </item>
+    
+  </channel>
+</rss>
