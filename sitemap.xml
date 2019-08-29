@@ -3,15 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.daswag.tech/categories/</loc>
+    <loc>/</loc>
   </url>
   
   <url>
-    <loc>https://www.daswag.tech/</loc>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>https://www.daswag.tech/tags/</loc>
+    <loc>/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>
