@@ -22,6 +22,19 @@ npm install -g daswag-cli@beta  Help and bugs If you find any issue with this re
     </item>
     
     <item>
+      <title>Configuring a corporate proxy</title>
+      <link>/setting_up_envrionment/configuring_corporate_proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/setting_up_envrionment/configuring_corporate_proxy/</guid>
+      <description>When JHipster is used in a company, you probably will need to configure all tools to bypass the corporate proxy.
+You can try to configure the HTTP_PROXY and HTTPS_PROXY environment variables or use a tool like Cntlm.
+But this probably won&amp;rsquo;t be enough, so you will need to configure separately all the tools that are used with JHipster.
+Introduction Supposing your proxy is defined with:
+ username password host port  The resulting configuration is: http://username:password@host:port</description>
+    </item>
+    
+    <item>
       <title>Credits</title>
       <link>/authors/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
