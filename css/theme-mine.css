@@ -8,14 +8,14 @@
     --MAIN-ANCHOR-color: #4881cd; /* color of anchors on titles */
 
     --MENU-HEADER-BG-color:#0C2228; /* Background color of menu header */
-    --MENU-HEADER-BORDER-color:#2C5AA0; /*Color of menu header border */
+    --MENU-HEADER-BORDER-color:#0C2228; /*Color of menu header border */
 
     --MENU-SEARCH-BG-color:#202c3c; /* Search field background color (by default borders + icons) */
     --MENU-SEARCH-BOX-color: #4d6584; /* Override search field border color */
     --MENU-SEARCH-BOX-ICONS-color: #4d6584; /* Override search field icons color */
 
-    --MENU-SECTIONS-ACTIVE-BG-color:#0a0c0e; /* Background color of the active section and its childs */
-    --MENU-SECTIONS-BG-color:#1c222a; /* Background color of other sections */
+    --MENU-SECTIONS-ACTIVE-BG-color:#0C2228; /* Background color of the active section and its childs */
+    --MENU-SECTIONS-BG-color:#0C2228; /* Background color of other sections */
     --MENU-SECTIONS-LINK-color: #ccc; /* Color of links in menu */
     --MENU-SECTIONS-LINK-HOVER-color: #e6e6e6;  /* Color of links in menu, when hovered */
     --MENU-SECTION-ACTIVE-CATEGORY-color: #777; /* Color of active category text */
@@ -61,7 +61,7 @@ a:hover {
 
 #sidebar #footer h2.github-title {
   font-size: 20px;
-  color: #fd9827 !important;
+  color: #fff !important;
   margin: 10px 0px 5px;
   padding: 0px;
   font-weight: normal !important;
@@ -132,11 +132,11 @@ a:hover {
 }
 
 #navigation a.nav-prev, #navigation a.nav-next {
-    color: #f19e39 !important;
+    color: #2C5AA0 !important;
 }
 
 #navigation a.nav-prev:hover, #navigation a.nav-next:hover  {
-    color: #e07d04 !important;
+    color: #2C5AA0 !important;
 }
 
 div.notices p:first-child:before {
@@ -179,7 +179,7 @@ pre {
 }
 
 div.notices.info p {
-    border-top: 30px solid #fd9827;
+    border-top: 30px solid #2C5AA0;
     background: #FFF2DB;
 }
 

@@ -13,7 +13,7 @@
 
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
-    <title>Tags :: daSWAG</title>
+    <title>Getting started :: daSWAG</title>
 
     
     <link href="../css/nucleus.css?1567164873" rel="stylesheet">
@@ -45,7 +45,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/">
+  <body class="" data-url="/getting_started/">
     <nav id="sidebar" class="">
 
 
@@ -138,8 +138,8 @@
   
     
     <li data-nav-id="/getting_started/" title="Getting started" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="../getting_started/">
@@ -213,6 +213,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/daswag/daswag-website/edit/master/content/getting_started/_index.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -231,7 +242,7 @@
             
           
           
-            <a href='../'>daSWAG</a> > Tags
+            <a href='../'>daSWAG</a> > Getting started
           
          
           
@@ -241,7 +252,28 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#i-class-fa-fa-cloud-i-installing-daswag-cli"><i class="fa fa-cloud"></i> Installing daSWAG CLI</a>
+<ul>
+<li><a href="#installation-types">Installation types</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#installation-with-npm-recommended-for-normal-users">Installation with Npm (recommended for normal users)</a></li>
+<li><a href="#installation-with-yarn-alternative-to-npm">Installation with Yarn (alternative to Npm)</a>
+<ul>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul></li>
+<li><a href="#optional-installations">Optional installations</a></li>
+<li><a href="#additional-information">Additional information</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -253,18 +285,84 @@
         
         <div id="body-inner">
           
-            <h1>Tags</h1>
+            <h1>Getting started</h1>
           
 
         
 
 
 
+	
 
+<h3 id="i-class-fa-fa-cloud-i-installing-daswag-cli"><i class="fa fa-cloud"></i> Installing daSWAG CLI</h3>
+
+<h4 id="installation-types">Installation types</h4>
+
+<p>We provide 2 ways of working with daSWAG. If in doubt, choose our 2nd option, &ldquo;Installation with Npm&rdquo;:</p>
 
 <ul>
-	
+<li>Installation with Npm is the classical way of working with daSWAG. Everything is installed on your machine, which can be a little complex to set up, but that&rsquo;s how most people usually work. In case of doubt, choose this installation.</li>
+<li>Installation with Yarn is the same as classical &ldquo;Installation with Npm&rdquo;, but using <a href="https://yarnpkg.com/">Yarn</a> instead of Npm. Please note that Yarn is a lot less popular than Npm in our community, so this isn&rsquo;t a recommended option for newcomers.</li>
 </ul>
+
+<h4 id="prerequisites">Prerequisites</h4>
+
+<ol>
+<li>Install Python 3.7 from <a href="https://www.python.org/downloads/">Python Software Foundation</a> (please use only 3.7.x versions, others are not supported yet).</li>
+</ol>
+
+<h4 id="installation-with-npm-recommended-for-normal-users">Installation with Npm (recommended for normal users)</h4>
+
+<ol>
+<li>Install Node.js from <a href="https://nodejs.org/">the Node.js website</a> (please use an LTS 64-bit version, non-LTS versions are not supported)</li>
+<li>Install daSWAG: <code>Npm install -g daswag-cli</code></li>
+</ol>
+
+<p>Now that daSWAG is installed, your next step is to <a href="{{ site.url }}/creating-a-project/">create a project</a></p>
+
+<h4 id="installation-with-yarn-alternative-to-npm">Installation with Yarn (alternative to Npm)</h4>
+
+<p>This is the same procedure as using Npm, with two differences:</p>
+
+<ol>
+<li>Instead of upgrading Npm in step 3, install Yarn from <a href="https://yarnpkg.com/en/docs/install">the Yarn website</a></li>
+<li>Use <code>yarn global add</code> instead of <code>Npm install -g</code>, for example:
+
+<ul>
+<li>To install Yeoman, type: <code>yarn global add yo</code></li>
+<li>To install daSWAG, type: <code>yarn global add daswag-cli</code></li>
+</ul></li>
+</ol>
+
+<h5 id="troubleshooting">Troubleshooting</h5>
+
+<p>If you have problems using Yarn globally, be sure to have <code>$HOME/.config/yarn/global/node_modules/.bin</code> in your path.</p>
+
+<p>On Mac or Linux: <code>export PATH=&quot;$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin&quot;</code></p>
+
+<h4 id="optional-installations">Optional installations</h4>
+
+<ol>
+<li>Install Git from <a href="http://git-scm.com/">git-scm.com</a>. We recommend you also use a tool like <a href="http://www.sourcetreeapp.com/">SourceTree</a> if you are starting with Git.</li>
+<li>Depending on your target configuration, you will need some peer dependencies to be able to build and deploy your project.
+
+<ul>
+<li>Install <em>AWS CLI</em> from <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html">docs.aws.amazon.com</a>. Then follow all steps to configure properly your credentials.</li>
+<li>Install <em>AWS SAM CLI</em> from <a href="https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html">docs.aws.amazon.com</a></li>
+</ul></li>
+</ol>
+
+<p>Once those dependencies have been installed. You will need to create an Cloud provider account before to continue further. Go to the following page to have more information on this procedure <a href="{{ site.url }}/creating-a-cloud-account/">create a cloud account</a></p>
+
+<h4 id="additional-information">Additional information</h4>
+
+<p>daSWAG uses <a href="http://yeoman.io/">Yeoman</a> for code generation and <a href="https://oclif.io/">Oclif</a> to manage the CLI.
+To find more information, tips and help, please have a look at <a href="https://yeoman.io/learning/index.html">the Yeoman &ldquo;getting starting&rdquo; guide</a> before <a href="https://github.com/daswag/daswag-cli/issues?state=open">submitting a bug</a>.</p>
+
+<p>The configuration will be stored in a generated <code>.yo-rc.json</code> file.</p>
+
+
+
 
 
 <footer class=" footline" >
@@ -337,6 +435,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -354,6 +453,8 @@
         
 
 
+        
+            <a class="nav nav-prev" href="../release_notes/2019_08_30_daswag_1_0_0_beta/" title="&gt; daSWAG release v1.0.0-beta"> <i class="fas fa-chevron-left"></i></a>
         
         
             <a class="nav nav-next" href="../release_notes/" title="Release notes" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
