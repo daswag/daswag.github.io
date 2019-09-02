@@ -15,11 +15,25 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/setting_up_envrionment/configuring_corporate_proxy/</guid>
-      <description>When JHipster is used in a company, you probably will need to configure all tools to bypass the corporate proxy.
+      <description>When daSWAG is used in a company, you probably will need to configure all tools to bypass the corporate proxy.
 You can try to configure the HTTP_PROXY and HTTPS_PROXY environment variables or use a tool like Cntlm.
-But this probably won&amp;rsquo;t be enough, so you will need to configure separately all the tools that are used with JHipster.
+But this probably won&amp;rsquo;t be enough, so you will need to configure separately all the tools that are used with daSWAG.
 Introduction Supposing your proxy is defined with:
  username password host port  The resulting configuration is: http://username:password@host:port</description>
+    </item>
+    
+    <item>
+      <title>Creating a Cloud provider account</title>
+      <link>/setting_up_envrionment/creating_cloud_account/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/setting_up_envrionment/creating_cloud_account/</guid>
+      <description>Introduction Supposing your proxy is defined with:
+ username password host port  The resulting configuration is: http://username:password@host:port
+If your use Cntlm, then your configuration would be: 127.0.0.1:3128. Otherwise, follow the next steps to configure each tool individually.
+NPM configuration Use these commands:
+npm config set proxy http://username:password@host:port npm config set https-proxy http://username:password@host:port  Or you can edit directly your ~/.npmrc file:
+proxy=http://username:password@host:port https-proxy=http://username:password@host:port https_proxy=http://username:password@host:port  Yarn configuration Use these commands:</description>
     </item>
     
   </channel>

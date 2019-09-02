@@ -13,7 +13,7 @@
 
     <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
-    <title>&gt; daSWAG release v1.0.0-beta :: daSWAG</title>
+    <title>Creating a Cloud provider account :: daSWAG</title>
 
     
     <link href="../../css/nucleus.css?1567454267" rel="stylesheet">
@@ -45,7 +45,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/release_notes/2019_08_30_daswag_1_0_0_beta/">
+  <body class="" data-url="/setting_up_envrionment/creating_cloud_account/">
     <nav id="sidebar" class="">
 
 
@@ -87,7 +87,7 @@
   
     
     <li data-nav-id="/release_notes/" title="Release notes" class="dd-item 
-        parent
+        
         
         
         ">
@@ -111,7 +111,7 @@
  
   
     
-      <li data-nav-id="/release_notes/2019_08_30_daswag_1_0_0_beta/" title="&gt; daSWAG release v1.0.0-beta" class="dd-item active">
+      <li data-nav-id="/release_notes/2019_08_30_daswag_1_0_0_beta/" title="&gt; daSWAG release v1.0.0-beta" class="dd-item ">
         <a href="../../release_notes/2019_08_30_daswag_1_0_0_beta/">
         &gt; daSWAG release v1.0.0-beta
         
@@ -160,7 +160,7 @@
   
     
     <li data-nav-id="/setting_up_envrionment/" title="Setting up your environnement" class="dd-item 
-        
+        parent
         
         
         ">
@@ -203,7 +203,7 @@
  
   
     
-      <li data-nav-id="/setting_up_envrionment/creating_cloud_account/" title="Creating a Cloud provider account" class="dd-item ">
+      <li data-nav-id="/setting_up_envrionment/creating_cloud_account/" title="Creating a Cloud provider account" class="dd-item active">
         <a href="../../setting_up_envrionment/creating_cloud_account/">
         Creating a Cloud provider account
         
@@ -287,7 +287,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/daswag/daswag-website/edit/master/content/release_notes/2019_08_30_daswag_1_0_0_beta.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/daswag/daswag-website/edit/master/content/setting_up_envrionment/creating_cloud_account.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -316,7 +316,7 @@
             
           
           
-            <a href='../../'>daSWAG</a> > <a href='../../release_notes/'>Release notes</a> > > daSWAG release v1.0.0-beta
+            <a href='../../'>daSWAG</a> > <a href='../../setting_up_envrionment/'>Setting up your environnement</a> > Creating a Cloud provider account
           
          
           
@@ -332,9 +332,19 @@
 <ul>
 <li>
 <ul>
-<li><a href="#most-important-features">Most important features</a></li>
-<li><a href="#how-to-install">How to install</a></li>
-<li><a href="#help-and-bugs">Help and bugs</a></li>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#npm-configuration">NPM configuration</a></li>
+<li><a href="#yarn-configuration">Yarn configuration</a></li>
+<li><a href="#python-configuration">Python configuration</a></li>
+<li><a href="#aws-cli">AWS Cli</a></li>
+<li><a href="#git-configuration">Git configuration</a></li>
+<li><a href="#docker">Docker</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -349,7 +359,7 @@
         
         <div id="body-inner">
           
-            <h1>&gt; daSWAG release v1.0.0-beta</h1>
+            <h1>Creating a Cloud provider account</h1>
           
 
         
@@ -357,38 +367,109 @@
 
 
 
-<p>This is our first beta release for daSWAG v1.</p>
+<h4 id="introduction">Introduction</h4>
 
-<h2 id="most-important-features">Most important features</h2>
+<p>Supposing your proxy is defined with:</p>
 
 <ul>
-<li>Create a new daSWAG project and initialize your user management component</li>
-<li>Add an Api or a Client component to your project.</li>
+<li>username</li>
+<li>password</li>
+<li>host</li>
+<li>port</li>
 </ul>
 
-<h2 id="how-to-install">How to install</h2>
+<p>The resulting configuration is: <code>http://username:password@host:port</code></p>
 
-<p>This is a beta release, so it is not available on our usual &ldquo;stable&rdquo; release channel.</p>
+<p>If your use <a href="http://cntlm.sourceforge.net/">Cntlm</a>, then your configuration would be: <code>127.0.0.1:3128</code>. Otherwise, follow the next steps to configure each tool individually.</p>
 
-<p>To install daSWAG v1.0.0-beta using NPM:</p>
+<h4 id="npm-configuration">NPM configuration</h4>
 
-<pre><code>npm install -g daswag-cli@beta
+<p>Use these commands:</p>
+
+<pre><code>npm config set proxy http://username:password@host:port
+npm config set https-proxy http://username:password@host:port
 </code></pre>
 
-<h2 id="help-and-bugs">Help and bugs</h2>
+<p>Or you can edit directly your <code>~/.npmrc</code> file:</p>
 
-<p>If you find any issue with this release, don&rsquo;t hesitate to:</p>
+<pre><code>proxy=http://username:password@host:port
+https-proxy=http://username:password@host:port
+https_proxy=http://username:password@host:port
+</code></pre>
 
-<ul>
-<li>Add a bug on our <a href="https://github.com/daswag/daswag-cli/issues?state=open">bug tracker</a></li>
-<li>Post a question on <a href="http://stackoverflow.com/tags/daswag/info">Stack Overflow</a></li>
-</ul>
+<h4 id="yarn-configuration">Yarn configuration</h4>
 
-<p>If the issue you have is an urgent bug or security issue, please:</p>
+<p>Use these commands:</p>
 
-<ul>
-<li>Contact <a href="https://twitter.com/daswag_project">@daswag_project</a> on Twitter</li>
-</ul>
+<pre><code>yarn config set proxy http://username:password@host:port
+yarn config set https-proxy http://username:password@host:port
+</code></pre>
+
+<h4 id="python-configuration">Python configuration</h4>
+
+<p>Python does not require a proxy to work, but you will need one for his package manager <code>pip</code>.</p>
+
+<p>To use it behind a proxy use a proxy parameter, which according to <code>pip --help</code>, is in the form: <code>scheme://[user:passwd@]proxy.server:port</code>`</p>
+
+<pre><code>pip install --proxy http://username:password@host:port TwitterApi
+</code></pre>
+
+<p>Or, you can use environment variables:</p>
+
+<p><strong>Linux, macOS, or Unix</strong></p>
+
+<pre><code>$ export HTTP_PROXY=http://username:password@host:port
+$ export HTTPS_PROXY=http://username:password@host:port
+</code></pre>
+
+<p><strong>Windows</strong></p>
+
+<pre><code>C:\&gt; setx HTTP_PROXY http://username:password@host:port
+C:\&gt; set HTTPS_PROXY=http://username:password@host:port
+</code></pre>
+
+<h4 id="aws-cli">AWS Cli</h4>
+
+<p>Use the commands to set your environment variables:</p>
+
+<p><strong>Linux, macOS, or Unix</strong></p>
+
+<pre><code>$ export HTTP_PROXY=http://username:password@host:port
+$ export HTTPS_PROXY=http://username:password@host:port
+</code></pre>
+
+<p><strong>Windows</strong></p>
+
+<pre><code>C:\&gt; setx HTTP_PROXY http://username:password@host:port
+C:\&gt; set HTTPS_PROXY=http://username:password@host:port
+</code></pre>
+
+<p>You will find additionnal details on <a href="https://docs.aws.amazon.com/fr_fr/cli/latest/userguide/cli-configure-proxy.html">docs.aws.amazon.com</a></p>
+
+<h4 id="git-configuration">Git configuration</h4>
+
+<p>Use these commands:</p>
+
+<pre><code>git config --global http.proxy http://username:password@host:port
+git config --global https.proxy http://username:password@host:port
+</code></pre>
+
+<p>Or you can edit directly your <code>~/.gitconfig</code> file:</p>
+
+<pre><code>[http]
+        proxy = http://username:password@host:port
+[https]
+        proxy = http://username:password@host:port
+</code></pre>
+
+<h4 id="docker">Docker</h4>
+
+<p>Depending on your OS, you have to edit a specific file (<code>/etc/sysconfig/docker</code> or <code>/etc/default/docker</code>).</p>
+
+<p>Then, you have to restart the docker service with: <code>sudo service docker restart</code>.</p>
+
+<p>It will not apply to systemd. See this <a href="https://docs.docker.com/engine/admin/systemd/#http-proxy">page from docker</a>
+to configure the proxy.</p>
 
 
 <footer class=" footline" >
@@ -427,58 +508,8 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -504,6 +535,9 @@
             
         
                     
+            
+        
+                    
                         
             
             
@@ -520,6 +554,56 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -530,10 +614,10 @@
 
 
         
-            <a class="nav nav-prev" href="../../release_notes/" title="Release notes"> <i class="fas fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="../../setting_up_envrionment/configuring_corporate_proxy/" title="Configuring a corporate proxy"> <i class="fas fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="../../getting_started/" title="Getting started" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="../../setting_up_envrionment/configuring_corporate_proxy/" title="Configuring a corporate proxy" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
         
     </div>
 
