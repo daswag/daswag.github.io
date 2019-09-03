@@ -14,11 +14,32 @@
 	"content": "To get the latest daSWAG news, please follow us on Twitters: @daswag_project\n \u0026gt; daSWAG release v1.0.0-beta   "
 },
 {
+	"uri": "/getting_started/",
+	"title": "Getting started",
+	"tags": [],
+	"description": "",
+	"content": " First things first, let\u0026rsquo;s get the Serverless Framework open source CLI installed on your machine.\nInstall or update daSWAG CLI # Install the daSWAG CLI using npm npm install -g daSWAG # Or an alternative yarn global add daswag-cli # You can also update the daSWAG cli from a previous version npm update -g serverless  If you don’t already have Node 10 or higher on your machine, you’ll need to do that first. - Install Node.js from the Node.js website (please use an LTS 64-bit version, non-LTS versions are not supported)\nOnce you have the Serverless Framework installed, simply run the ‘serverless’ command and follow the prompts. In no time you will have deployed your first serverless app using the Serverless Framework CLI and configured your Serverless Framework Dashboard account to automatically monitor your serverless app, generate alerts, and much more.\nOptional installations  Install Git from git-scm.com. We recommend you also use a tool like SourceTree if you are starting with Git. Depending on your target configuration, you will need some peer dependencies to be able to build and deploy your project.  Install AWS CLI from docs.aws.amazon.com. Then follow all steps to configure properly your credentials. Install AWS SAM CLI from docs.aws.amazon.com Install Python 3.7 from Python Software Foundation (please use only 3.7.x versions, others are not supported yet).   Troubleshooting If you have problems using Yarn globally, be sure to have $HOME/.config/yarn/global/node_modules/.bin in your path.\nOn Mac or Linux: export PATH=\u0026quot;$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin\u0026quot;\nCreate a new project Once you have the daSWAG CLI installed, simply run the daswag new command and follow the prompts. In no time you will have deployed your first serverless web app using the daSWAG CLI.\ndaswag new  Additional information daSWAG uses Yeoman for code generation and Oclif to manage the CLI. To find more information, tips and help, please have a look at the Yeoman \u0026ldquo;getting starting\u0026rdquo; guide before submitting a bug.\nThe configuration will be stored in a generated .yo-rc.json file.\n"
+},
+{
+	"uri": "/setting_up_envrionment/",
+	"title": "Setting up your environnement",
+	"tags": [],
+	"description": "",
+	"content": " Chapter 1 Setting up your environment Discover how to configure your environment in order to develop / build / package and deploy daSWAG\n"
+},
+{
 	"uri": "/release_notes/2019_08_30_daswag_1_0_0_beta/",
 	"title": "&gt; daSWAG release v1.0.0-beta",
 	"tags": [],
 	"description": "",
 	"content": " This is our first beta release for daSWAG v1.\nMost important features  Create a new daSWAG project and initialize your user management component Add an Api or a Client component to your project.  How to install This is a beta release, so it is not available on our usual \u0026ldquo;stable\u0026rdquo; release channel.\nTo install daSWAG v1.0.0-beta using NPM:\nnpm install -g daswag-cli@beta  Help and bugs If you find any issue with this release, don\u0026rsquo;t hesitate to:\n Add a bug on our bug tracker Post a question on Stack Overflow  If the issue you have is an urgent bug or security issue, please:\n Contact @daswag_project on Twitter  "
+},
+{
+	"uri": "/cli_reference/",
+	"title": "CLI Reference",
+	"tags": [],
+	"description": "",
+	"content": "  Description Getting Started Usage Commands   Getting Started The Getting Started tutorial is a step-by-step guide to introduce you to daSWAG. If you have not developed anything using Serverless technologies, this Getting Started is a great place to get started.\nUsage $ npm install -g daswag-cli $ daswag COMMAND running command... $ daswag (-v|--version|version) daswag-cli/1.0.0-beta darwin-x64 node-v10.15.1 $ daswag --help [COMMAND] USAGE $ daswag COMMAND ...  Commands  daswag add daswag add:api daswag add:client daswag autocomplete [SHELL] daswag doc [KEYWORD] daswag help [COMMAND] daswag new  daswag add add a new component to your project\nUSAGE $ daswag add  See code: src/commands/add/index.ts\ndaswag add:api Add an API based service\nUSAGE $ daswag add:api  See code: src/commands/add/api.ts\ndaswag add:client Add a client interface\nUSAGE $ daswag add:client  See code: src/commands/add/client.ts\ndaswag autocomplete [SHELL] display autocomplete installation instructions\nUSAGE $ daswag autocomplete [SHELL] ARGUMENTS SHELL shell type OPTIONS -r, --refresh-cache Refresh cache (ignores displaying instructions) EXAMPLES $ daswag autocomplete $ daswag autocomplete bash $ daswag autocomplete zsh $ daswag autocomplete --refresh-cache  See code: @oclif/plugin-autocomplete\ndaswag doc [KEYWORD] opens the official daSWAG documentation (daswag.tech/documentation) in a browser, and searches for a given keyword.\nUSAGE $ daswag doc [KEYWORD] OPTIONS -s, --search Search on Google  See code: src/commands/doc/index.ts\ndaswag help [COMMAND] display help for daswag\nUSAGE $ daswag help [COMMAND] ARGUMENTS COMMAND command to show help for OPTIONS --all see all commands in CLI  See code: @oclif/plugin-help\ndaswag new creates and initialize a new daSWAG project.\nUSAGE $ daswag new  See code: src/commands/new/index.ts "
 },
 {
 	"uri": "/categories/",
@@ -47,20 +68,6 @@
 	"tags": [],
 	"description": "",
 	"content": " Thanks to our wonderful contributors  for making Open Source a better place! .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start }\n.ghContributors \u0026gt; div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors \u0026gt; div label{ padding-left: 4px ; } .ghContributors \u0026gt; div span{ font-size: x-small; padding-left: 4px ; }\n  @stevehouel 1 commits \n\n"
-},
-{
-	"uri": "/getting_started/",
-	"title": "Getting started",
-	"tags": [],
-	"description": "",
-	"content": " First things first, let\u0026rsquo;s get the Serverless Framework open source CLI installed on your machine.\nInstall or update daSWAG CLI # Install the daSWAG CLI using npm npm install -g daSWAG # Or an alternative yarn global add daswag-cli # You can also update the daSWAG cli from a previous version npm update -g serverless  If you don’t already have Node 10 or higher on your machine, you’ll need to do that first. - Install Node.js from the Node.js website (please use an LTS 64-bit version, non-LTS versions are not supported)\nOnce you have the Serverless Framework installed, simply run the ‘serverless’ command and follow the prompts. In no time you will have deployed your first serverless app using the Serverless Framework CLI and configured your Serverless Framework Dashboard account to automatically monitor your serverless app, generate alerts, and much more.\nOptional installations  Install Git from git-scm.com. We recommend you also use a tool like SourceTree if you are starting with Git. Depending on your target configuration, you will need some peer dependencies to be able to build and deploy your project.  Install AWS CLI from docs.aws.amazon.com. Then follow all steps to configure properly your credentials. Install AWS SAM CLI from docs.aws.amazon.com Install Python 3.7 from Python Software Foundation (please use only 3.7.x versions, others are not supported yet).   Troubleshooting If you have problems using Yarn globally, be sure to have $HOME/.config/yarn/global/node_modules/.bin in your path.\nOn Mac or Linux: export PATH=\u0026quot;$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin\u0026quot;\nCreate a new project Once you have the daSWAG CLI installed, simply run the daswag new command and follow the prompts. In no time you will have deployed your first serverless web app using the daSWAG CLI.\ndaswag new  Additional information daSWAG uses Yeoman for code generation and Oclif to manage the CLI. To find more information, tips and help, please have a look at the Yeoman \u0026ldquo;getting starting\u0026rdquo; guide before submitting a bug.\nThe configuration will be stored in a generated .yo-rc.json file.\n"
-},
-{
-	"uri": "/setting_up_envrionment/",
-	"title": "Setting up your environnement",
-	"tags": [],
-	"description": "",
-	"content": " Chapter 1 Setting up your environment Discover how to configure your environment in order to develop / build / package and deploy daSWAG\n"
 },
 {
 	"uri": "/tags/",

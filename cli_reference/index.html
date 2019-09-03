@@ -13,7 +13,7 @@
 
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
-    <title>Credits :: daSWAG</title>
+    <title>CLI Reference :: daSWAG</title>
 
     
     <link href="../css/nucleus.css?1567516681" rel="stylesheet">
@@ -45,7 +45,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/authors/">
+  <body class="" data-url="/cli_reference/">
     <nav id="sidebar" class="">
 
 
@@ -230,8 +230,8 @@
   
     
     <li data-nav-id="/cli_reference/" title="CLI Reference" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="../cli_reference/">
@@ -309,7 +309,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/daswag/daswag-website/edit/master/content//authors.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/daswag/daswag-website/edit/master/content/cli_reference/_index.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -324,6 +324,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -332,7 +334,7 @@
             
           
           
-            <a href='../'>daSWAG (Serverless Web Application Generator)</a> > Credits
+            <a href='../'>daSWAG (Serverless Web Application Generator)</a> > CLI Reference
           
          
           
@@ -340,62 +342,195 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#commands">Commands</a>
+<ul>
+<li><a href="#daswag-add"><code>daswag add</code></a></li>
+<li><a href="#daswag-add-api"><code>daswag add:api</code></a></li>
+<li><a href="#daswag-add-client"><code>daswag add:client</code></a></li>
+<li><a href="#daswag-autocomplete-shell"><code>daswag autocomplete [SHELL]</code></a></li>
+<li><a href="#daswag-doc-keyword"><code>daswag doc [KEYWORD]</code></a></li>
+<li><a href="#daswag-help-command"><code>daswag help [COMMAND]</code></a></li>
+<li><a href="#daswag-new"><code>daswag new</code></a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>CLI Reference</h1>
           
 
         
 
 
 
+	
 
-<h3 id="thanks-to-our-wonderful-contributors-i-class-fas-fa-heart-i-for-making-open-source-a-better-place">Thanks to our wonderful contributors <i class="fas fa-heart"></i> for making Open Source a better place!</h3>
+<!-- toc -->
 
-<p><style type="text/css">
-.ghContributors{
-display:flex;
-flex-flow:  wrap;
-align-content: flex-start
-}</p>
+<ul>
+<li><a href="#description">Description</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#commands">Commands</a>
+<!-- tocstop --></li>
+</ul>
 
-<p>.ghContributors &gt; div{
-width: 50% ;
-display: inline-flex;
-margin-bottom: 5px;
-}
-.ghContributors &gt; div label{
-padding-left: 4px ;
-}
-.ghContributors &gt; div span{
-font-size: x-small;
-padding-left: 4px ;
-}</p>
+<h3 id="getting-started">Getting Started</h3>
 
-<p></style>
-<div class="ghContributors"></p>
+<p>The <a href="../getting_started">Getting Started tutorial</a> is a step-by-step guide to introduce you to daSWAG. If you have not developed anything using Serverless technologies, this Getting Started is a great place to get started.</p>
 
-<p><div>
-    <img src="https://avatars0.githubusercontent.com/u/18191277?v=4" class="inline" width="32" height="32" style="height: 32px;height: 32px;margin-bottom:.25em; vertical-align:middle; ">
-    <label><a href="https://github.com/stevehouel">@stevehouel</a></label>
-    <span class="contributions">1 commits</span>
-  </div></p>
+<h3 id="usage">Usage</h3>
 
-<p></div></p>
+<!-- usage -->
+
+<pre><code class="language-sh-session">$ npm install -g daswag-cli
+$ daswag COMMAND
+running command...
+$ daswag (-v|--version|version)
+daswag-cli/1.0.0-beta darwin-x64 node-v10.15.1
+$ daswag --help [COMMAND]
+USAGE
+  $ daswag COMMAND
+...
+</code></pre>
+
+<!-- usagestop -->
+
+<h3 id="commands">Commands</h3>
+
+<!-- commands -->
+
+<ul>
+<li><a href="#daswag-add"><code>daswag add</code></a></li>
+<li><a href="#daswag-addapi"><code>daswag add:api</code></a></li>
+<li><a href="#daswag-addclient"><code>daswag add:client</code></a></li>
+<li><a href="#daswag-autocomplete-shell"><code>daswag autocomplete [SHELL]</code></a></li>
+<li><a href="#daswag-doc-keyword"><code>daswag doc [KEYWORD]</code></a></li>
+<li><a href="#daswag-help-command"><code>daswag help [COMMAND]</code></a></li>
+<li><a href="#daswag-new"><code>daswag new</code></a></li>
+</ul>
+
+<h4 id="daswag-add"><code>daswag add</code></h4>
+
+<p>add a new component to your project</p>
+
+<pre><code>USAGE
+  $ daswag add
+</code></pre>
+
+<p><em>See code: <a href="https://github.com/daswag/daswag-cli/blob/v1.0.0-beta/src/commands/add/index.ts">src/commands/add/index.ts</a></em></p>
+
+<h4 id="daswag-add-api"><code>daswag add:api</code></h4>
+
+<p>Add an API based service</p>
+
+<pre><code>USAGE
+  $ daswag add:api
+</code></pre>
+
+<p><em>See code: <a href="https://github.com/daswag/daswag-cli/blob/v1.0.0-beta/src/commands/add/api.ts">src/commands/add/api.ts</a></em></p>
+
+<h4 id="daswag-add-client"><code>daswag add:client</code></h4>
+
+<p>Add a client interface</p>
+
+<pre><code>USAGE
+  $ daswag add:client
+</code></pre>
+
+<p><em>See code: <a href="https://github.com/daswag/daswag-cli/blob/v1.0.0-beta/src/commands/add/client.ts">src/commands/add/client.ts</a></em></p>
+
+<h4 id="daswag-autocomplete-shell"><code>daswag autocomplete [SHELL]</code></h4>
+
+<p>display autocomplete installation instructions</p>
+
+<pre><code>USAGE
+  $ daswag autocomplete [SHELL]
+
+ARGUMENTS
+  SHELL  shell type
+
+OPTIONS
+  -r, --refresh-cache  Refresh cache (ignores displaying instructions)
+
+EXAMPLES
+  $ daswag autocomplete
+  $ daswag autocomplete bash
+  $ daswag autocomplete zsh
+  $ daswag autocomplete --refresh-cache
+</code></pre>
+
+<p><em>See code: <a href="https://github.com/oclif/plugin-autocomplete/blob/v0.1.3/src/commands/autocomplete/index.ts">@oclif/plugin-autocomplete</a></em></p>
+
+<h4 id="daswag-doc-keyword"><code>daswag doc [KEYWORD]</code></h4>
+
+<p>opens the official daSWAG documentation (daswag.tech/documentation) in a browser, and searches for a given keyword.</p>
+
+<pre><code>USAGE
+  $ daswag doc [KEYWORD]
+
+OPTIONS
+  -s, --search  Search on Google
+</code></pre>
+
+<p><em>See code: <a href="https://github.com/daswag/daswag-cli/blob/v1.0.0-beta/src/commands/doc/index.ts">src/commands/doc/index.ts</a></em></p>
+
+<h4 id="daswag-help-command"><code>daswag help [COMMAND]</code></h4>
+
+<p>display help for daswag</p>
+
+<pre><code>USAGE
+  $ daswag help [COMMAND]
+
+ARGUMENTS
+  COMMAND  command to show help for
+
+OPTIONS
+  --all  see all commands in CLI
+</code></pre>
+
+<p><em>See code: <a href="https://github.com/oclif/plugin-help/blob/v2.2.1/src/commands/help.ts">@oclif/plugin-help</a></em></p>
+
+<h4 id="daswag-new"><code>daswag new</code></h4>
+
+<p>creates and initialize a new daSWAG project.</p>
+
+<pre><code>USAGE
+  $ daswag new
+</code></pre>
+
+<p><em>See code: <a href="https://github.com/daswag/daswag-cli/blob/v1.0.0-beta/src/commands/new/index.ts">src/commands/new/index.ts</a></em>
+<!-- commandsstop --></p>
+
+
+
 
 
 <footer class=" footline" >
 	
 </footer>
 
-
-        
-            </div> 
         
         </div>
         
@@ -526,6 +661,7 @@ padding-left: 4px ;
             
                 
                     
+                    
                 
                 
 
@@ -543,6 +679,8 @@ padding-left: 4px ;
         
 
 
+        
+            <a class="nav nav-prev" href="../setting_up_envrionment/creating_cloud_account/" title="Creating a Cloud provider account"> <i class="fas fa-chevron-left"></i></a>
         
         
             <a class="nav nav-next" href="../release_notes/" title="Release notes" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
@@ -580,4 +718,3 @@ padding-left: 4px ;
 
   </body>
 </html>
-

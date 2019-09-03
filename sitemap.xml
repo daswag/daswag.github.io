@@ -11,7 +11,19 @@
   </url>
   
   <url>
+    <loc>/getting_started/</loc>
+  </url>
+  
+  <url>
+    <loc>/setting_up_envrionment/</loc>
+  </url>
+  
+  <url>
     <loc>/release_notes/2019_08_30_daswag_1_0_0_beta/</loc>
+  </url>
+  
+  <url>
+    <loc>/cli_reference/</loc>
   </url>
   
   <url>
@@ -28,14 +40,6 @@
   
   <url>
     <loc>/authors/</loc>
-  </url>
-  
-  <url>
-    <loc>/getting_started/</loc>
-  </url>
-  
-  <url>
-    <loc>/setting_up_envrionment/</loc>
   </url>
   
   <url>
