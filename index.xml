@@ -40,10 +40,7 @@ Introduction Supposing your proxy is defined with:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/setting_up_envrionment/creating_cloud_account/</guid>
-      <description>XXXXXXXX AWS Free Tier
- Introduction Amazon Web Services Creating your AWS account  Go to the Amazon Web Services home page.
- Choose Create an AWS Account. Note: If you&amp;rsquo;ve signed in to AWS recently, the button might say Sign In to the Console.
- Enter your account information, and then choose Continue. Important: Be sure that you enter your account information correctly, especially your email address. If you enter your email address incorrectly, you won&amp;rsquo;t be able to access your account.</description>
+      <description>The deployment of a serverless web application requires the use of an account on the target cloud service provider. The use of such services may generate costs at the end of the month depending on your use. That&amp;rsquo;s why, you will have to fill your credit card number when creating a cloud provider account. Don&amp;rsquo;t worry, daSWAG makes maximum use of free tier services, allowing you to use your application in development and integration environments with complete peace of mind.</description>
     </item>
     
     <item>
