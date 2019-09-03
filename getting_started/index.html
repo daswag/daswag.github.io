@@ -16,21 +16,21 @@
     <title>Getting started :: daSWAG</title>
 
     
-    <link href="../css/nucleus.css?1567454267" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1567454267" rel="stylesheet">
-    <link href="../css/hybrid.css?1567454267" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1567454267" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1567454267" rel="stylesheet">
-    <link href="../css/auto-complete.css?1567454267" rel="stylesheet">
-    <link href="../css/theme.css?1567454267" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1567454267" rel="stylesheet">
-    <link href="../css/jquery-ui.min.css?1567454267" rel="stylesheet">
+    <link href="../css/nucleus.css?1567516289" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1567516289" rel="stylesheet">
+    <link href="../css/hybrid.css?1567516289" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1567516289" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1567516289" rel="stylesheet">
+    <link href="../css/auto-complete.css?1567516289" rel="stylesheet">
+    <link href="../css/theme.css?1567516289" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1567516289" rel="stylesheet">
+    <link href="../css/jquery-ui.min.css?1567516289" rel="stylesheet">
     
-      <link href="../css/theme-mine.css?1567454267" rel="stylesheet">
+      <link href="../css/theme-mine.css?1567516289" rel="stylesheet">
     
 
-    <script src="../js/jquery-3.3.1.min.js?1567454267"></script>
-    <script src="../js/jquery-ui-1.12.1.min.js?1567454267"></script>
+    <script src="../js/jquery-3.3.1.min.js?1567516289"></script>
+    <script src="../js/jquery-ui-1.12.1.min.js?1567516289"></script>
 
 
     <style type="text/css">
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1567454267"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1567454267"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1567516289"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1567516289"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1567454267"></script>
+<script type="text/javascript" src="../js/search.js?1567516289"></script>
 
     
   </div>
@@ -312,7 +312,7 @@
             
           
           
-            <a href='../'>daSWAG</a> > Getting started
+            <a href='../'>daSWAG (Serverless Web Application Generator)</a> > Getting started
           
          
           
@@ -328,18 +328,13 @@
 <ul>
 <li>
 <ul>
-<li><a href="#installing-daswag-cli">Installing daSWAG CLI</a>
+<li><a href="#install-or-update-daswag-cli">Install or update daSWAG CLI</a>
 <ul>
-<li><a href="#installation-types">Installation types</a></li>
-<li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#installation-with-npm-recommended-for-normal-users">Installation with Npm (recommended for normal users)</a></li>
-<li><a href="#installation-with-yarn-alternative-to-npm">Installation with Yarn (alternative to Npm)</a>
-<ul>
+<li><a href="#optional-installations">Optional installations</a></li>
 <li><a href="#troubleshooting">Troubleshooting</a></li>
 </ul></li>
-<li><a href="#optional-installations">Optional installations</a></li>
+<li><a href="#create-a-new-project">Create a new project</a></li>
 <li><a href="#additional-information">Additional information</a></li>
-</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -364,51 +359,24 @@
 
 	
 
-<h3 id="installing-daswag-cli">Installing daSWAG CLI</h3>
+<p>First things first, let&rsquo;s get the Serverless Framework open source CLI installed on your machine.</p>
 
-<h4 id="installation-types">Installation types</h4>
+<h3 id="install-or-update-daswag-cli">Install or update daSWAG CLI</h3>
 
-<p>We provide 2 ways of working with daSWAG. If in doubt, choose our 2nd option, &ldquo;Installation with Npm&rdquo;:</p>
+<pre><code class="language-bash"># Install the daSWAG CLI using npm
+npm install -g daSWAG
 
-<ul>
-<li>Installation with Npm is the classical way of working with daSWAG. Everything is installed on your machine, which can be a little complex to set up, but that&rsquo;s how most people usually work. In case of doubt, choose this installation.</li>
-<li>Installation with Yarn is the same as classical &ldquo;Installation with Npm&rdquo;, but using <a href="https://yarnpkg.com/">Yarn</a> instead of Npm. Please note that Yarn is a lot less popular than Npm in our community, so this isn&rsquo;t a recommended option for newcomers.</li>
-</ul>
+# Or an alternative
+yarn global add daswag-cli
 
-<h4 id="prerequisites">Prerequisites</h4>
+# You can also update the daSWAG cli from a previous version
+npm update -g serverless
+</code></pre>
 
-<ol>
-<li>Install Python 3.7 from <a href="https://www.python.org/downloads/">Python Software Foundation</a> (please use only 3.7.x versions, others are not supported yet).</li>
-</ol>
+<p>If you don’t already have Node 10 or higher on your machine, you’ll need to do that first.
+- Install Node.js from <a href="https://nodejs.org/">the Node.js website</a> (please use an LTS 64-bit version, non-LTS versions are not supported)</p>
 
-<h4 id="installation-with-npm-recommended-for-normal-users">Installation with Npm (recommended for normal users)</h4>
-
-<ol>
-<li>Install Node.js from <a href="https://nodejs.org/">the Node.js website</a> (please use an LTS 64-bit version, non-LTS versions are not supported)</li>
-<li>Install daSWAG: <code>npm install -g daswag-cli</code></li>
-</ol>
-
-<p>Now that daSWAG is installed, your next step is to <a href="{{ site.url }}/creating-a-project/">create a project</a></p>
-
-<h4 id="installation-with-yarn-alternative-to-npm">Installation with Yarn (alternative to Npm)</h4>
-
-<p>This is the same procedure as using Npm, with two differences:</p>
-
-<ol>
-<li>Instead of upgrading Npm in step 3, install Yarn from <a href="https://yarnpkg.com/en/docs/install">the Yarn website</a></li>
-<li>Use <code>yarn global add</code> instead of <code>npm install -g</code>, for example:
-
-<ul>
-<li>To install Yeoman, type: <code>yarn global add yo</code></li>
-<li>To install daSWAG, type: <code>yarn global add daswag-cli</code></li>
-</ul></li>
-</ol>
-
-<h5 id="troubleshooting">Troubleshooting</h5>
-
-<p>If you have problems using Yarn globally, be sure to have <code>$HOME/.config/yarn/global/node_modules/.bin</code> in your path.</p>
-
-<p>On Mac or Linux: <code>export PATH=&quot;$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin&quot;</code></p>
+<p>Once you have the Serverless Framework installed, simply run the ‘serverless’ command and follow the prompts. In no time you will have deployed your first serverless app using the Serverless Framework CLI and configured your Serverless Framework Dashboard account to automatically monitor your serverless app, generate alerts, and much more.</p>
 
 <h4 id="optional-installations">Optional installations</h4>
 
@@ -419,12 +387,24 @@
 <ul>
 <li>Install <em>AWS CLI</em> from <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html">docs.aws.amazon.com</a>. Then follow all steps to configure properly your credentials.</li>
 <li>Install <em>AWS SAM CLI</em> from <a href="https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html">docs.aws.amazon.com</a></li>
+<li>Install <em>Python 3.7</em> from <a href="https://www.python.org/downloads/">Python Software Foundation</a> (please use only 3.7.x versions, others are not supported yet).</li>
 </ul></li>
 </ol>
 
-<p>Once those dependencies have been installed. You will need to create an Cloud provider account before to continue further. Go to the following page to have more information on this procedure <a href="{{ site.url }}/creating-a-cloud-account/">create a cloud account</a></p>
+<h4 id="troubleshooting">Troubleshooting</h4>
 
-<h4 id="additional-information">Additional information</h4>
+<p>If you have problems using Yarn globally, be sure to have <code>$HOME/.config/yarn/global/node_modules/.bin</code> in your path.</p>
+
+<p>On Mac or Linux: <code>export PATH=&quot;$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin&quot;</code></p>
+
+<h3 id="create-a-new-project">Create a new project</h3>
+
+<p>Once you have the daSWAG CLI installed, simply run the <code>daswag new</code> command and follow the prompts. In no time you will have deployed your first serverless web app using the daSWAG CLI.</p>
+
+<pre><code class="language-bash">daswag new
+</code></pre>
+
+<h3 id="additional-information">Additional information</h3>
 
 <p>daSWAG uses <a href="http://yeoman.io/">Yeoman</a> for code generation and <a href="https://oclif.io/">Oclif</a> to manage the CLI.
 To find more information, tips and help, please have a look at <a href="https://yeoman.io/learning/index.html">the Yeoman &ldquo;getting starting&rdquo; guide</a> before <a href="https://github.com/daswag/daswag-cli/issues?state=open">submitting a bug</a>.</p>
@@ -587,19 +567,19 @@ To find more information, tips and help, please have a look at <a href="https://
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1567454267"></script>
-    <script src="../js/perfect-scrollbar.min.js?1567454267"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1567454267"></script>
-    <script src="../js/jquery.sticky.js?1567454267"></script>
-    <script src="../js/featherlight.min.js?1567454267"></script>
-    <script src="../js/highlight.pack.js?1567454267"></script>
+    <script src="../js/clipboard.min.js?1567516289"></script>
+    <script src="../js/perfect-scrollbar.min.js?1567516289"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1567516289"></script>
+    <script src="../js/jquery.sticky.js?1567516289"></script>
+    <script src="../js/featherlight.min.js?1567516289"></script>
+    <script src="../js/highlight.pack.js?1567516289"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1567454267"></script>
-    <script src="../js/learn.js?1567454267"></script>
-    <script src="../js/hugo-learn.js?1567454267"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1567516289"></script>
+    <script src="../js/learn.js?1567516289"></script>
+    <script src="../js/hugo-learn.js?1567516289"></script>
 
-    <link href="../mermaid/mermaid.css?1567454267" type="text/css" rel="stylesheet" />
-    <script src="../mermaid/mermaid.min.js?1567454267"></script>
+    <link href="../mermaid/mermaid.css?1567516289" type="text/css" rel="stylesheet" />
+    <script src="../mermaid/mermaid.min.js?1567516289"></script>
     <script>
 	var config = {
         startOnLoad:true,

@@ -132,11 +132,11 @@ a:hover {
 }
 
 #navigation a.nav-prev, #navigation a.nav-next {
-    color: #2C5AA0 !important;
+    color: #778ba5 !important;
 }
 
 #navigation a.nav-prev:hover, #navigation a.nav-next:hover  {
-    color: #2C5AA0 !important;
+    color: #778ba5 !important;
 }
 
 div.notices p:first-child:before {
@@ -179,7 +179,7 @@ pre {
 }
 
 div.notices.info p {
-    border-top: 30px solid #2C5AA0;
+    border-top: 30px solid #778ba5;
     background: #FFF2DB;
 }
 

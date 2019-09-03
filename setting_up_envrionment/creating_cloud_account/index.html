@@ -16,21 +16,21 @@
     <title>Creating a Cloud provider account :: daSWAG</title>
 
     
-    <link href="../../css/nucleus.css?1567454267" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1567454267" rel="stylesheet">
-    <link href="../../css/hybrid.css?1567454267" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1567454267" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1567454267" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1567454267" rel="stylesheet">
-    <link href="../../css/theme.css?1567454267" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1567454267" rel="stylesheet">
-    <link href="../../css/jquery-ui.min.css?1567454267" rel="stylesheet">
+    <link href="../../css/nucleus.css?1567516289" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1567516289" rel="stylesheet">
+    <link href="../../css/hybrid.css?1567516289" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1567516289" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1567516289" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1567516289" rel="stylesheet">
+    <link href="../../css/theme.css?1567516289" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1567516289" rel="stylesheet">
+    <link href="../../css/jquery-ui.min.css?1567516289" rel="stylesheet">
     
-      <link href="../../css/theme-mine.css?1567454267" rel="stylesheet">
+      <link href="../../css/theme-mine.css?1567516289" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1567454267"></script>
-    <script src="../../js/jquery-ui-1.12.1.min.js?1567454267"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1567516289"></script>
+    <script src="../../js/jquery-ui-1.12.1.min.js?1567516289"></script>
 
 
     <style type="text/css">
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1567454267"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1567454267"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1567516289"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1567516289"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1567454267"></script>
+<script type="text/javascript" src="../../js/search.js?1567516289"></script>
 
     
   </div>
@@ -316,7 +316,7 @@
             
           
           
-            <a href='../../'>daSWAG</a> > <a href='../../setting_up_envrionment/'>Setting up your environnement</a> > Creating a Cloud provider account
+            <a href='../../'>daSWAG (Serverless Web Application Generator)</a> > <a href='../../setting_up_envrionment/'>Setting up your environnement</a> > Creating a Cloud provider account
           
          
           
@@ -334,15 +334,27 @@
 <ul>
 <li>
 <ul>
-<li>
-<ul>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#npm-configuration">NPM configuration</a></li>
-<li><a href="#yarn-configuration">Yarn configuration</a></li>
-<li><a href="#python-configuration">Python configuration</a></li>
-<li><a href="#aws-cli">AWS Cli</a></li>
-<li><a href="#git-configuration">Git configuration</a></li>
-<li><a href="#docker">Docker</a></li>
+<li><a href="#amazon-web-services">Amazon Web Services</a>
+<ul>
+<li><a href="#creating-your-aws-account">Creating your AWS account</a>
+<ul>
+<li><a href="#add-a-payment-method">Add a payment method</a></li>
+<li><a href="#verify-your-phone-number">Verify your phone number</a></li>
+<li><a href="#choose-an-aws-support-plan">Choose an AWS Support plan</a></li>
+<li><a href="#wait-for-account-activation">Wait for account activation</a></li>
+<li><a href="#troubleshooting-delays-in-account-activation">Troubleshooting delays in account activation</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#configuring-the-aws-cli">Configuring the AWS CLI</a>
+<ul>
+<li><a href="#quickly-configuring-the-aws-cli">Quickly Configuring the AWS CLI</a>
+<ul>
+<li><a href="#access-key-and-secret-access-key">Access Key and Secret Access Key</a></li>
+<li><a href="#region">Region</a></li>
+<li><a href="#output-format">Output Format</a></li>
+</ul></li>
+<li><a href="#creating-multiple-profiles">Creating Multiple Profiles</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -367,109 +379,190 @@
 
 
 
-<h4 id="introduction">Introduction</h4>
 
-<p>Supposing your proxy is defined with:</p>
+<div class="notices warning" ><p>XXXXXXXX <a href="https://aws.amazon.com/fr/free/?all-free-tier.sort-by=item.additionalFields.SortRank&amp;all-free-tier.sort-order=asc">AWS Free Tier</a></p>
+</div>
+
+
+<h3 id="introduction">Introduction</h3>
+
+<h3 id="amazon-web-services">Amazon Web Services</h3>
+
+<h4 id="creating-your-aws-account">Creating your AWS account</h4>
+
+<ol>
+<li><p>Go to the <a href="https://aws.amazon.com/">Amazon Web Services home page</a>.</p></li>
+
+<li><p>Choose <strong>Create an AWS Account</strong>.
+<strong>Note</strong>: If you&rsquo;ve signed in to AWS recently, the button might say <strong>Sign In to the Console</strong>.</p></li>
+
+<li><p>Enter your account information, and then choose <strong>Continue</strong>.
+<strong>Important</strong>: Be sure that you enter your account information correctly, especially your email address. If you enter your email address incorrectly, you won&rsquo;t be able to access your account. If <strong>Create a new AWS account</strong> isn&rsquo;t visible, first choose <strong>Sign in to a different account</strong>, and then choose <strong>Create a new AWS account</strong>.</p></li>
+
+<li><p>Choose <strong>Personal</strong> or <strong>Professional</strong>.
+<strong>Note</strong>: Personal accounts and professional accounts have the same features and functions.</p></li>
+
+<li><p>Enter your company or personal information.</p></li>
+
+<li><p>Read and accept the <a href="https://aws.amazon.com/agreement/">AWS Customer Agreement</a>.
+<strong>Note</strong>: Be sure that you read and understand the terms of the AWS Customer Agreement.</p></li>
+
+<li><p>Choose <strong>Create Account and Continue</strong>.
+You receive an email to confirm that your account is created. You can sign in to your new account using the email address and password you supplied. However, you can&rsquo;t use AWS services until you finish activating your account.</p></li>
+</ol>
+
+<h5 id="add-a-payment-method">Add a payment method</h5>
+
+<p>On the <strong>Payment Information</strong> page, enter the information about your payment method, and then choose <strong>Secure Submit</strong>.</p>
+
+<p><strong>Note</strong>: If you want to use a different address for your AWS account, choose <strong>Use a new address</strong> before you choose <strong>Secure Submit</strong>.</p>
+
+<h5 id="verify-your-phone-number">Verify your phone number</h5>
+
+<ol>
+<li><p>Choose whether you want to verify your account by <strong>Text message (SMS)</strong> or a Voice call.</p></li>
+
+<li><p>Choose your country or region code from the list.</p></li>
+
+<li><p>Enter a phone number where you can be reached in the next few minutes.</p></li>
+
+<li><p>Enter the code displayed in the captcha.</p></li>
+
+<li><p>When you&rsquo;re ready, choose <strong>Contact me</strong>. In a few moments, an automated system will contact you.
+<strong>Note</strong>: If you chose to verify your account by SMS, choose <strong>Send SMS</strong> instead.</p></li>
+
+<li><p>Enter the PIN you receive by text message or voice call, and then choose Continue.</p></li>
+</ol>
+
+<h5 id="choose-an-aws-support-plan">Choose an AWS Support plan</h5>
+
+<p>On the <strong>Select a Support Plan</strong> page, choose one of the available Support plans. For a description of the available Support plans and their benefits, see <a href="https://aws.amazon.com/premiumsupport/features/">Compare AWS Support Plans</a>.</p>
+
+<h5 id="wait-for-account-activation">Wait for account activation</h5>
+
+<p>After you choose a Support plan, a confirmation page indicates that your account is being activated. Accounts are usually activated within a few minutes, but the process might take up to 24 hours.</p>
+
+<p>You can sign in to your AWS account during this time. The AWS home page might display a button that shows &ldquo;Complete Sign Up&rdquo; during this time, even if you&rsquo;ve completed all the steps in the sign-up process.</p>
+
+<p>When your account is fully activated, you&rsquo;ll receive a confirmation email. After you receive this email, you have full access to all AWS services.</p>
+
+<h5 id="troubleshooting-delays-in-account-activation">Troubleshooting delays in account activation</h5>
+
+<p>Account activation can sometimes be delayed. If the process takes more than 24 hours, check the following:</p>
 
 <ul>
-<li>username</li>
-<li>password</li>
-<li>host</li>
-<li>port</li>
+<li><p><strong>Finish the account activation process</strong>. You might have accidentally closed the window for the sign-up process before you&rsquo;ve added all the necessary information. To finish the sign-up process, open <a href="https://aws-portal.amazon.com/gp/aws/developer/registration/index.html">https://aws-portal.amazon.com/gp/aws/developer/registration/index.html</a> and sign in using the email address and password you chose for the account.</p></li>
+
+<li><p><strong>Check the information associated with your payment method</strong>. Check Payment Methods in the AWS Billing and Cost Management console. Fix any errors in the information.</p></li>
+
+<li><p><strong>Contact your financial institution</strong>. Financial institutions occasionally reject authorization requests from AWS for various reasons. Contact your payment method&rsquo;s issuing institution and ask that they approve authorization requests from AWS.
+<strong>Note</strong>: AWS cancels the authorization request as soon as it&rsquo;s approved by your financial institution. You aren&rsquo;t charged for authorization requests from AWS. Authorization requests might still appear as a small charge (usually 1 USD) on statements from your financial institution.</p></li>
+
+<li><p><strong>Check your email for requests for additional information</strong>. Check your email to see if AWS needs any information from you to complete the activation process.</p></li>
+
+<li><p><strong>Try a different browser</strong>.</p></li>
+
+<li><p><strong>Contact AWS Support</strong>. Contact AWS Support for help. Be sure to mention any troubleshooting steps that you already tried.
+Note: Don&rsquo;t provide sensitive information, such as credit card numbers, in any correspondence with AWS.</p></li>
 </ul>
 
-<p>The resulting configuration is: <code>http://username:password@host:port</code></p>
+<h3 id="configuring-the-aws-cli">Configuring the AWS CLI</h3>
 
-<p>If your use <a href="http://cntlm.sourceforge.net/">Cntlm</a>, then your configuration would be: <code>127.0.0.1:3128</code>. Otherwise, follow the next steps to configure each tool individually.</p>
+<p>This section explains how to configure the settings that the AWS Command Line Interface (AWS CLI) uses to interact with AWS, including your security credentials, the default output format, and the default AWS Region.</p>
 
-<h4 id="npm-configuration">NPM configuration</h4>
 
-<p>Use these commands:</p>
+<div class="notices note" ><p>AWS requires that all incoming requests are cryptographically signed. The AWS CLI does this for you. The &ldquo;signature&rdquo; includes a date/time stamp. Therefore, you must ensure that your computer&rsquo;s date and time are set correctly. If you don&rsquo;t, and the date/time in the signature is too far off of the date/time recognized by the AWS service, then AWS rejects the request.</p>
+</div>
 
-<pre><code>npm config set proxy http://username:password@host:port
-npm config set https-proxy http://username:password@host:port
+
+<h4 id="quickly-configuring-the-aws-cli">Quickly Configuring the AWS CLI</h4>
+
+<p>For general use, the aws configure command is the fastest way to set up your AWS CLI installation.</p>
+
+<pre><code class="language-bash">$ aws configure
+AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Default region name [None]: us-west-2
+Default output format [None]: json
 </code></pre>
 
-<p>Or you can edit directly your <code>~/.npmrc</code> file:</p>
+<p>When you type this command, the AWS CLI prompts you for four pieces of information (access key, secret access key, AWS Region, and output format). These are described in the following sections. The AWS CLI stores this information in a profile (a collection of settings) named default. The information in the default profile is used any time you run an AWS CLI command that doesn&rsquo;t explicitly specify a profile to use.</p>
 
-<pre><code>proxy=http://username:password@host:port
-https-proxy=http://username:password@host:port
-https_proxy=http://username:password@host:port
+<h5 id="access-key-and-secret-access-key">Access Key and Secret Access Key</h5>
+
+<p>The AWS Access Key ID and AWS Secret Access Key are your AWS credentials. They are associated with an AWS Identity and Access Management (IAM) user or role that determines what permissions you have. For a tutorial on how to create a user with the IAM service, see Creating Your First IAM Admin User and Group in the IAM User Guide.</p>
+
+<p>Access keys consist of an access key ID and secret access key, which are used to sign programmatic requests that you make to AWS. If you don&rsquo;t have access keys, you can create them from the AWS Management Console. As a best practice, do not use the AWS account root user access keys for any task where it&rsquo;s not required. Instead, create a new administrator IAM user with access keys for yourself.</p>
+
+<p>The only time that you can view or download the secret access key is when you create the keys. You cannot recover them later. However, you can create new access keys at any time. You must also have permissions to perform the required IAM actions. For more information, see Permissions Required to Access IAM Resources in the IAM User Guide.</p>
+
+<p><strong>To create access keys for an IAM user</strong></p>
+
+<ol>
+<li><p>Sign in to the AWS Management Console and open the IAM console at <a href="https://console.aws.amazon.com/iam/">https://console.aws.amazon.com/iam/</a>.</p></li>
+
+<li><p>In the navigation pane, choose Users.</p></li>
+
+<li><p>Choose the name of the user whose access keys you want to create, and then choose the Security credentials tab.</p></li>
+
+<li><p>In the <strong>Access keys</strong> section, choose <strong>Create access key</strong>.</p></li>
+
+<li><p>To view the new access key pair, choose Show. You will not have access to the secret access key again after this dialog box closes. Your credentials will look something like this:</p>
+
+<ul>
+<li><p>Access key ID: AKIAIOSFODNN7EXAMPLE</p></li>
+
+<li><p>Secret access key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</p></li>
+</ul></li>
+
+<li><p>To download the key pair, choose <strong>Download .csv file</strong>. Store the keys in a secure location. You will not have access to the secret access key again after this dialog box closes. Keep the keys confidential in order to protect your AWS account and never email them. Do not share them outside your organization, even if an inquiry appears to come from AWS or Amazon.com. No one who legitimately represents Amazon will ever ask you for your secret key.</p></li>
+
+<li><p>After you download the .csv file, choose <strong>Close</strong>. When you create an access key, the key pair is active by default, and you can use the pair right away.</p></li>
+</ol>
+
+<h5 id="region">Region</h5>
+
+<p>The Default region name identifies the AWS Region whose servers you want to send your requests to by default. This is typically the Region closest to you, but it can be any Region. For example, you can type us-west-2 to use US West (Oregon). This is the Region that all later requests are sent to, unless you specify otherwise in an individual command.</p>
+
+
+<div class="notices note" ><p>You must specify an AWS Region when using the AWS CLI, either explicitly or by setting a default Region. For a list of the available Regions, see <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and Endpoints</a>. The Region designators used by the AWS CLI are the same names that you see in AWS Management Console URLs and service endpoints.</p>
+</div>
+
+
+<h5 id="output-format">Output Format</h5>
+
+<p>The Default output format specifies how the results are formatted. The value can be any of the values in the following list. If you don&rsquo;t specify an output format, json is used as the default.</p>
+
+<ul>
+<li><p><strong>json</strong>: The output is formatted as a JSON string.</p></li>
+
+<li><p><strong>text</strong>: The output is formatted as multiple lines of tab-separated string values, which can be useful if you want to pass the output to a text processor, like grep, sed, or awk.</p></li>
+
+<li><p><strong>table</strong>: The output is formatted as a table using the characters +|- to form the cell borders. It typically presents the information in a &ldquo;human-friendly&rdquo; format that is much easier to read than the others, but not as programmatically useful.</p></li>
+</ul>
+
+<h4 id="creating-multiple-profiles">Creating Multiple Profiles</h4>
+
+<p>If you use the command shown in the previous section, the result is a single profile named <code>default</code>. You can create additional configurations that you can refer to with a name by specifying the <code>--profile</code> option and assigning a name. The following example creates a profile named <code>produser</code>. You can specify credentials from a completely different account and region than the other profiles.</p>
+
+<pre><code class="language-bash">$ aws configure --profile produser
+AWS Access Key ID [None]: AKIAI44QH8DHBEXAMPLE
+AWS Secret Access Key [None]: je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY
+Default region name [None]: us-east-1
+Default output format [None]: text
 </code></pre>
 
-<h4 id="yarn-configuration">Yarn configuration</h4>
+<p>Then, when you run a command, you can omit the <code>--profile</code> option and use the credentials and settings stored in the default profile.</p>
 
-<p>Use these commands:</p>
-
-<pre><code>yarn config set proxy http://username:password@host:port
-yarn config set https-proxy http://username:password@host:port
+<pre><code class="language-bash">$ aws s3 ls
 </code></pre>
 
-<h4 id="python-configuration">Python configuration</h4>
+<p>Or you can specify a <code>--profile profilename</code> and use the credentials and settings stored under that name.</p>
 
-<p>Python does not require a proxy to work, but you will need one for his package manager <code>pip</code>.</p>
-
-<p>To use it behind a proxy use a proxy parameter, which according to <code>pip --help</code>, is in the form: <code>scheme://[user:passwd@]proxy.server:port</code>`</p>
-
-<pre><code>pip install --proxy http://username:password@host:port TwitterApi
+<pre><code class="language-bash">$ aws s3 ls --profile produser
 </code></pre>
 
-<p>Or, you can use environment variables:</p>
-
-<p><strong>Linux, macOS, or Unix</strong></p>
-
-<pre><code>$ export HTTP_PROXY=http://username:password@host:port
-$ export HTTPS_PROXY=http://username:password@host:port
-</code></pre>
-
-<p><strong>Windows</strong></p>
-
-<pre><code>C:\&gt; setx HTTP_PROXY http://username:password@host:port
-C:\&gt; set HTTPS_PROXY=http://username:password@host:port
-</code></pre>
-
-<h4 id="aws-cli">AWS Cli</h4>
-
-<p>Use the commands to set your environment variables:</p>
-
-<p><strong>Linux, macOS, or Unix</strong></p>
-
-<pre><code>$ export HTTP_PROXY=http://username:password@host:port
-$ export HTTPS_PROXY=http://username:password@host:port
-</code></pre>
-
-<p><strong>Windows</strong></p>
-
-<pre><code>C:\&gt; setx HTTP_PROXY http://username:password@host:port
-C:\&gt; set HTTPS_PROXY=http://username:password@host:port
-</code></pre>
-
-<p>You will find additionnal details on <a href="https://docs.aws.amazon.com/fr_fr/cli/latest/userguide/cli-configure-proxy.html">docs.aws.amazon.com</a></p>
-
-<h4 id="git-configuration">Git configuration</h4>
-
-<p>Use these commands:</p>
-
-<pre><code>git config --global http.proxy http://username:password@host:port
-git config --global https.proxy http://username:password@host:port
-</code></pre>
-
-<p>Or you can edit directly your <code>~/.gitconfig</code> file:</p>
-
-<pre><code>[http]
-        proxy = http://username:password@host:port
-[https]
-        proxy = http://username:password@host:port
-</code></pre>
-
-<h4 id="docker">Docker</h4>
-
-<p>Depending on your OS, you have to edit a specific file (<code>/etc/sysconfig/docker</code> or <code>/etc/default/docker</code>).</p>
-
-<p>Then, you have to restart the docker service with: <code>sudo service docker restart</code>.</p>
-
-<p>It will not apply to systemd. See this <a href="https://docs.docker.com/engine/admin/systemd/#http-proxy">page from docker</a>
-to configure the proxy.</p>
+<p>To update any of your settings, simply run <code>aws configure</code> again (with or without the <code>--profile</code> parameter, depending on which profile you want to update) and enter new values as appropriate. The next sections contain more information about the files that <code>aws configure</code> creates, additional settings, and named profiles.</p>
 
 
 <footer class=" footline" >
@@ -626,19 +719,19 @@ to configure the proxy.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1567454267"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1567454267"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1567454267"></script>
-    <script src="../../js/jquery.sticky.js?1567454267"></script>
-    <script src="../../js/featherlight.min.js?1567454267"></script>
-    <script src="../../js/highlight.pack.js?1567454267"></script>
+    <script src="../../js/clipboard.min.js?1567516289"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1567516289"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1567516289"></script>
+    <script src="../../js/jquery.sticky.js?1567516289"></script>
+    <script src="../../js/featherlight.min.js?1567516289"></script>
+    <script src="../../js/highlight.pack.js?1567516289"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1567454267"></script>
-    <script src="../../js/learn.js?1567454267"></script>
-    <script src="../../js/hugo-learn.js?1567454267"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1567516289"></script>
+    <script src="../../js/learn.js?1567516289"></script>
+    <script src="../../js/hugo-learn.js?1567516289"></script>
 
-    <link href="../../mermaid/mermaid.css?1567454267" type="text/css" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.min.js?1567454267"></script>
+    <link href="../../mermaid/mermaid.css?1567516289" type="text/css" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.min.js?1567516289"></script>
     <script>
 	var config = {
         startOnLoad:true,
