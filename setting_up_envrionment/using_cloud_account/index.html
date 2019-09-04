@@ -13,7 +13,7 @@
 
     <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
-    <title>Configuring a corporate proxy :: daSWAG</title>
+    <title>Using a Cloud provider account :: daSWAG</title>
 
     
     <link href="../../css/nucleus.css?1567591159" rel="stylesheet">
@@ -45,7 +45,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/setting_up_envrionment/configuring_corporate_proxy/">
+  <body class="" data-url="/setting_up_envrionment/using_cloud_account/">
     <nav id="sidebar" class="">
 
 
@@ -184,7 +184,7 @@
  
   
     
-      <li data-nav-id="/setting_up_envrionment/configuring_corporate_proxy/" title="Configuring a corporate proxy" class="dd-item active">
+      <li data-nav-id="/setting_up_envrionment/configuring_corporate_proxy/" title="Configuring a corporate proxy" class="dd-item ">
         <a href="../../setting_up_envrionment/configuring_corporate_proxy/">
         Configuring a corporate proxy
         
@@ -203,7 +203,7 @@
  
   
     
-      <li data-nav-id="/setting_up_envrionment/using_cloud_account/" title="Using a Cloud provider account" class="dd-item ">
+      <li data-nav-id="/setting_up_envrionment/using_cloud_account/" title="Using a Cloud provider account" class="dd-item active">
         <a href="../../setting_up_envrionment/using_cloud_account/">
         Using a Cloud provider account
         
@@ -309,7 +309,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/daswag/daswag-website/edit/master/content/setting_up_envrionment/configuring_corporate_proxy.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/daswag/daswag-website/edit/master/content/setting_up_envrionment/using_cloud_account.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -338,7 +338,7 @@
             
           
           
-            <a href='../../'>daSWAG (Serverless Web Application Generator)</a> > <a href='../../setting_up_envrionment/'>Setting up your environnement</a> > Configuring a corporate proxy
+            <a href='../../'>daSWAG (Serverless Web Application Generator)</a> > <a href='../../setting_up_envrionment/'>Setting up your environnement</a> > Using a Cloud provider account
           
          
           
@@ -356,13 +356,15 @@
 <ul>
 <li>
 <ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#npm-configuration">NPM configuration</a></li>
-<li><a href="#yarn-configuration">Yarn configuration</a></li>
-<li><a href="#python-configuration">Python configuration</a></li>
-<li><a href="#aws-cli">AWS Cli</a></li>
-<li><a href="#git-configuration">Git configuration</a></li>
-<li><a href="#docker">Docker</a></li>
+<li><a href="#amazon-web-services">Amazon Web Services</a>
+<ul>
+<li><a href="#free-tier">Free Tier</a></li>
+<li><a href="#configure-the-aws-cli">Configure the AWS CLI</a>
+<ul>
+<li><a href="#access-key-and-secret-access-key">Access Key and Secret Access Key</a></li>
+<li><a href="#region">Region</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -378,7 +380,7 @@
         
         <div id="body-inner">
           
-            <h1>Configuring a corporate proxy</h1>
+            <h1>Using a Cloud provider account</h1>
           
 
         
@@ -386,115 +388,79 @@
 
 
 
-<p>When daSWAG is used in a company, you probably will need to configure all tools to bypass the corporate proxy.</p>
 
-<p>You can try to configure the <code>HTTP_PROXY</code> and <code>HTTPS_PROXY</code> environment variables or use a tool like <a href="http://cntlm.sourceforge.net/">Cntlm</a>.</p>
+<div class="notices warning" ><p>The deployment of a serverless web application requires the use of an account on the target cloud service provider. The use of such services may generate costs at the end of the month depending on your use. That&rsquo;s why, you will have to fill your credit card number when creating a cloud provider account.
+Don&rsquo;t worry, <strong>daSWAG makes maximum use of free tier services</strong>, allowing you to use your application in development and integration environments with complete peace of mind.</p>
+</div>
 
-<p>But this probably won&rsquo;t be enough, so you will need to configure separately all the tools that are used with daSWAG.</p>
 
-<h3 id="introduction">Introduction</h3>
+<h3 id="amazon-web-services">Amazon Web Services</h3>
 
-<p>Supposing your proxy is defined with:</p>
+<h4 id="free-tier">Free Tier</h4>
+
+
+<div class="notices note" ><p>I invite you to read the site: <a href="https://aws.amazon.com/fr/free/?all-free-tier.sort-by=item.additionalFields.SortRank&amp;all-free-tier.sort-order=asc">AWS Free Tier</a> and look at the pricing model of each of the services used to have a better understanding of your possibilities and the price it will cost.</p>
+</div>
+
+
+<h4 id="configure-the-aws-cli">Configure the AWS CLI</h4>
+
+<p>For general use, the aws configure command is the fastest way to set up your AWS CLI installation.</p>
+
+<pre><code class="language-bash">$ aws configure
+AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Default region name [None]: us-west-2
+Default output format [None]: json
+</code></pre>
+
+<p>When you type this command, the AWS CLI prompts you for four pieces of information (access key, secret access key, AWS Region, and output format). These are described in the following sections. The AWS CLI stores this information in a profile (a collection of settings) named default. The information in the default profile is used any time you run an AWS CLI command that doesn&rsquo;t explicitly specify a profile to use.</p>
+
+<h5 id="access-key-and-secret-access-key">Access Key and Secret Access Key</h5>
+
+<p>The AWS Access Key ID and AWS Secret Access Key are your AWS credentials. They are associated with an AWS Identity and Access Management (IAM) user or role that determines what permissions you have. For a tutorial on how to create a user with the IAM service, see Creating Your First IAM Admin User and Group in the IAM User Guide.</p>
+
+<p>Access keys consist of an access key ID and secret access key, which are used to sign programmatic requests that you make to AWS. If you don&rsquo;t have access keys, you can create them from the AWS Management Console. As a best practice, do not use the AWS account root user access keys for any task where it&rsquo;s not required. Instead, create a new administrator IAM user with access keys for yourself.</p>
+
+<p>The only time that you can view or download the secret access key is when you create the keys. You cannot recover them later. However, you can create new access keys at any time. You must also have permissions to perform the required IAM actions. For more information, see Permissions Required to Access IAM Resources in the IAM User Guide.</p>
+
+<p><strong>To create access keys for an IAM user</strong></p>
+
+<ol>
+<li><p>Sign in to the AWS Management Console and open the IAM console at <a href="https://console.aws.amazon.com/iam/">https://console.aws.amazon.com/iam/</a>.</p></li>
+
+<li><p>In the navigation pane, choose Users.</p></li>
+
+<li><p>Choose the name of the user whose access keys you want to create, and then choose the Security credentials tab.</p></li>
+
+<li><p>In the <strong>Access keys</strong> section, choose <strong>Create access key</strong>.</p></li>
+
+<li><p>To view the new access key pair, choose Show. You will not have access to the secret access key again after this dialog box closes. Your credentials will look something like this:</p>
 
 <ul>
-<li>username</li>
-<li>password</li>
-<li>host</li>
-<li>port</li>
-</ul>
+<li><p>Access key ID: AKIAIOSFODNN7EXAMPLE</p></li>
 
-<p>The resulting configuration is: <code>http://username:password@host:port</code></p>
+<li><p>Secret access key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</p></li>
+</ul></li>
 
-<p>If your use <a href="http://cntlm.sourceforge.net/">Cntlm</a>, then your configuration would be: <code>127.0.0.1:3128</code>. Otherwise, follow the next steps to configure each tool individually.</p>
+<li><p>To download the key pair, choose <strong>Download .csv file</strong>. Store the keys in a secure location. You will not have access to the secret access key again after this dialog box closes. Keep the keys confidential in order to protect your AWS account and never email them. Do not share them outside your organization, even if an inquiry appears to come from AWS or Amazon.com. No one who legitimately represents Amazon will ever ask you for your secret key.</p></li>
 
-<h3 id="npm-configuration">NPM configuration</h3>
+<li><p>After you download the .csv file, choose <strong>Close</strong>. When you create an access key, the key pair is active by default, and you can use the pair right away.</p></li>
+</ol>
 
-<p>Use these commands:</p>
+<h5 id="region">Region</h5>
 
-<pre><code>npm config set proxy http://username:password@host:port
-npm config set https-proxy http://username:password@host:port
-</code></pre>
+<p>The Default region name identifies the AWS Region whose servers you want to send your requests to by default. This is typically the Region closest to you, but it can be any Region. For example, you can type us-west-2 to use US West (Oregon). This is the Region that all later requests are sent to, unless you specify otherwise in an individual command.</p>
 
-<p>Or you can edit directly your <code>~/.npmrc</code> file:</p>
 
-<pre><code>proxy=http://username:password@host:port
-https-proxy=http://username:password@host:port
-https_proxy=http://username:password@host:port
-</code></pre>
+<div class="notices note" ><p>You must specify an AWS Region when using the AWS CLI, either explicitly or by setting a default Region. For a list of the available Regions, see <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and Endpoints</a>. The Region designators used by the AWS CLI are the same names that you see in AWS Management Console URLs and service endpoints.</p>
+</div>
 
-<h3 id="yarn-configuration">Yarn configuration</h3>
 
-<p>Use these commands:</p>
 
-<pre><code>yarn config set proxy http://username:password@host:port
-yarn config set https-proxy http://username:password@host:port
-</code></pre>
+<div class="notices info" ><p>For more information about configuring your AWS CLI, please follow the latest AWS Documentation page <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html">AWS Documentation</a></p>
+</div>
 
-<h3 id="python-configuration">Python configuration</h3>
-
-<p>Python does not require a proxy to work, but you will need one for his package manager <code>pip</code>.</p>
-
-<p>To use it behind a proxy use a proxy parameter, which according to <code>pip --help</code>, is in the form: <code>scheme://[user:passwd@]proxy.server:port</code>`</p>
-
-<pre><code>pip install --proxy http://username:password@host:port TwitterApi
-</code></pre>
-
-<p>Or, you can use environment variables:</p>
-
-<p><strong>Linux, macOS, or Unix</strong></p>
-
-<pre><code>$ export HTTP_PROXY=http://username:password@host:port
-$ export HTTPS_PROXY=http://username:password@host:port
-</code></pre>
-
-<p><strong>Windows</strong></p>
-
-<pre><code>C:\&gt; setx HTTP_PROXY http://username:password@host:port
-C:\&gt; set HTTPS_PROXY=http://username:password@host:port
-</code></pre>
-
-<h3 id="aws-cli">AWS Cli</h3>
-
-<p>Use the commands to set your environment variables:</p>
-
-<p><strong>Linux, macOS, or Unix</strong></p>
-
-<pre><code>$ export HTTP_PROXY=http://username:password@host:port
-$ export HTTPS_PROXY=http://username:password@host:port
-</code></pre>
-
-<p><strong>Windows</strong></p>
-
-<pre><code>C:\&gt; setx HTTP_PROXY http://username:password@host:port
-C:\&gt; set HTTPS_PROXY=http://username:password@host:port
-</code></pre>
-
-<p>You will find additionnal details on <a href="https://docs.aws.amazon.com/fr_fr/cli/latest/userguide/cli-configure-proxy.html">docs.aws.amazon.com</a></p>
-
-<h3 id="git-configuration">Git configuration</h3>
-
-<p>Use these commands:</p>
-
-<pre><code>git config --global http.proxy http://username:password@host:port
-git config --global https.proxy http://username:password@host:port
-</code></pre>
-
-<p>Or you can edit directly your <code>~/.gitconfig</code> file:</p>
-
-<pre><code>[http]
-        proxy = http://username:password@host:port
-[https]
-        proxy = http://username:password@host:port
-</code></pre>
-
-<h3 id="docker">Docker</h3>
-
-<p>Depending on your OS, you have to edit a specific file (<code>/etc/sysconfig/docker</code> or <code>/etc/default/docker</code>).</p>
-
-<p>Then, you have to restart the docker service with: <code>sudo service docker restart</code>.</p>
-
-<p>It will not apply to systemd. See this <a href="https://docs.docker.com/engine/admin/systemd/#http-proxy">page from docker</a>
-to configure the proxy.</p>
 
 
 <footer class=" footline" >
@@ -598,6 +564,8 @@ to configure the proxy.</p>
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -606,6 +574,26 @@ to configure the proxy.</p>
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -631,34 +619,15 @@ to configure the proxy.</p>
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
 
         
 
 
         
-            <a class="nav nav-prev" href="../../setting_up_envrionment/" title="Setting up your environnement"> <i class="fas fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="../../setting_up_envrionment/configuring_corporate_proxy/" title="Configuring a corporate proxy"> <i class="fas fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="../../setting_up_envrionment/using_cloud_account/" title="Using a Cloud provider account" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="../../cli_reference/" title="CLI Reference" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
         
     </div>
 

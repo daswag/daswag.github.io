@@ -35,15 +35,6 @@ Introduction Supposing your proxy is defined with:
     </item>
     
     <item>
-      <title>Creating a Cloud provider account</title>
-      <link>/setting_up_envrionment/creating_cloud_account/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/setting_up_envrionment/creating_cloud_account/</guid>
-      <description>The deployment of a serverless web application requires the use of an account on the target cloud service provider. The use of such services may generate costs at the end of the month depending on your use. That&amp;rsquo;s why, you will have to fill your credit card number when creating a cloud provider account. Don&amp;rsquo;t worry, daSWAG makes maximum use of free tier services, allowing you to use your application in development and integration environments with complete peace of mind.</description>
-    </item>
-    
-    <item>
       <title>Credits</title>
       <link>/authors/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -52,6 +43,15 @@ Introduction Supposing your proxy is defined with:
       <description>Thanks to our wonderful contributors  for making Open Source a better place! .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start }
 .ghContributors &amp;gt; div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label{ padding-left: 4px ; } .ghContributors &amp;gt; div span{ font-size: x-small; padding-left: 4px ; }
   @stevehouel 1 commits</description>
+    </item>
+    
+    <item>
+      <title>Using a Cloud provider account</title>
+      <link>/setting_up_envrionment/using_cloud_account/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/setting_up_envrionment/using_cloud_account/</guid>
+      <description>The deployment of a serverless web application requires the use of an account on the target cloud service provider. The use of such services may generate costs at the end of the month depending on your use. That&amp;rsquo;s why, you will have to fill your credit card number when creating a cloud provider account. Don&amp;rsquo;t worry, daSWAG makes maximum use of free tier services, allowing you to use your application in development and integration environments with complete peace of mind.</description>
     </item>
     
   </channel>

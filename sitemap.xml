@@ -35,15 +35,15 @@
   </url>
   
   <url>
-    <loc>/setting_up_envrionment/creating_cloud_account/</loc>
-  </url>
-  
-  <url>
     <loc>/authors/</loc>
   </url>
   
   <url>
     <loc>/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>/setting_up_envrionment/using_cloud_account/</loc>
   </url>
   
 </urlset>
